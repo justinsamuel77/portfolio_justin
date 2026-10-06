@@ -145,9 +145,9 @@ export const experiences = [
   {
     id: 1,
     img: require("../images/wizinoa_logo.png"),
-    role: "Mern Stack developer",
+    role: "Mern Stack Developer",
     company: "WizInoa",
-    date: "Jan 2025 - Present",
+    date: "Jan 2025 - Aug 2025",
     desc: `Specializing in platforms such as HRMS, CRM systems, and client service management solutions. Contributed to multiple 
 projects with a strong emphasis on API development and payment gateway integrations. Developed web applications featuring Google Maps integration and subscription-based service models, enhancing user 
 interaction and operational efficiency for location-aware client platforms.`,
@@ -157,7 +157,7 @@ interaction and operational efficiency for location-aware client platforms.`,
     img: require("../images/warely_logo.png"),
     role: "Full Stack Developer",
     company: "Warely Technology",
-    date: "Nov 2024 - Present",
+    date: "Sep 2025 - Present",
     desc: "Singapore-based product company providing POS and digital ordering solutions including POS systems, KDS, ODS, kiosks, sound bar devices, and online food ordering platforms.",
   },
 ];
