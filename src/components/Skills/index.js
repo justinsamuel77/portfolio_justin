@@ -113,11 +113,12 @@ const SkillItem = styled.div`
   }
 `
 
-const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
+const SkillIconWrapper = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
 `
-
 
 const Skills = () => {
   return (
@@ -127,16 +128,23 @@ const Skills = () => {
         <Desc>Here are some of my skills on which I have been working on for the past years.
         </Desc>
         <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
+          {skills.map((skill, index) => (
+            <Skill key={index}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
-                    {item.name}
-                  </SkillItem>
-                ))}
+                {skill.skills.map((item, idx) => {
+                  const IconComponent = item.icon;
+                  return (
+                    <SkillItem key={idx}>
+                      {IconComponent && (
+                        <SkillIconWrapper>
+                          <IconComponent size={20} />
+                        </SkillIconWrapper>
+                      )}
+                      {item.name}
+                    </SkillItem>
+                  );
+                })}
               </SkillList>
             </Skill>
           ))}
